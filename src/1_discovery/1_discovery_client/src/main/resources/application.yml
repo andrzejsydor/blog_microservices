@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: discovery-client
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://blog-1-discovery-container:8761/eureka
+  instance:
+    preferIpAddress: true
