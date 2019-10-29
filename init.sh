@@ -13,15 +13,15 @@ createProject() {
     mv $3/ src/$1/
 }
 
-createProject 1_discovery DiscoveryServer 1_discovery_server cloud-eureka-server 
-createProject 1_discovery DiscoveryClient 1_discovery_client cloud-eureka,web,devtools,actuator
+#createProject 1_discovery DiscoveryServer 1_discovery_server cloud-eureka-server 
+#createProject 1_discovery DiscoveryClient 1_discovery_client cloud-eureka,web,devtools,actuator
 
-#createProject admin AdminServer admin_admin codecentric-spring-boot-admin-server
-#createProject admin AdminClient admin_client codecentric-spring-boot-admin-client,web,devtools,actuator
+###createProject admin AdminServer admin_admin codecentric-spring-boot-admin-server
+###createProject admin AdminClient admin_client codecentric-spring-boot-admin-client,web,devtools,actuator
 
-#createProject route ZuulServer zuul cloud-zuul
-#createProject route RouteBooks route_books web,devtools,actuator
-#createProject route RouteCalc route_calc web,devtools,actuator
+#createProject 2_api_gateway ZuulServer 2_zuul cloud-zuul
+#createProject 2_api_gateway RouteBooks 2_books web,devtools,actuator
+#createProject 2_api_gateway RouteCalc 2_calc web,devtools,actuator
 
 
 #createProject load_balancing DiscoveryServer load_balancing_discovery cloud-eureka-server
