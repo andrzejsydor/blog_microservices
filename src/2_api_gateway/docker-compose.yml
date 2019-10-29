@@ -1,0 +1,36 @@
+version: '3'
+services:
+  blog-2-books:
+    container_name: blog-2-books-container
+    build:
+      context: ./2_books
+    ports:
+      - "8081:8080"
+    environment:
+      - port=8080
+    stdin_open: true
+    tty: true
+    networks:
+      - net1
+  blog-2-calc:
+    container_name: blog-2-calc-container
+    build:
+      context: ./2_calc
+    ports: 
+      - "8082:8080"
+    environment:
+      - port=8080        
+    stdin_open: true
+    tty: true
+    networks:
+      - net1
+  blog-2-zuul:
+    container_name: blog-2-zuul-container
+    build:
+      context: ./2_zuul
+    ports: 
+      - "8762:8762"
+    networks:
+      - net1
+networks:
+  net1:
