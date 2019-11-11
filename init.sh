@@ -23,10 +23,9 @@ createProject() {
 #createProject 2_api_gateway RouteBooks 2_books web,devtools,actuator
 #createProject 2_api_gateway RouteCalc 2_calc web,devtools,actuator
 
-
-#createProject load_balancing DiscoveryServer load_balancing_discovery cloud-eureka-server
-#createProject load_balancing ZuulServer load_balancing_zuul cloud-zuul,cloud-eureka
-#createProject load_balancing LoadBalancingBooks load_balancing_books cloud-eureka,web,devtools,actuator
+createProject 3_load_balancing DiscoveryServer 3_load_balancing_discovery cloud-eureka-server
+createProject 3_load_balancing ZuulServer 3_load_balancing_zuul cloud-zuul,cloud-eureka
+createProject 3_load_balancing LoadBalancingBooks 3_load_balancing_books cloud-eureka,web,devtools,actuator
 
 
 #createProject ribbon RibbonServer ribbon_server web,devtools
