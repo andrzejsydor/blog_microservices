@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka-service
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  #Self-preservation is a feature where Eureka servers stop expiring instances from the registry when they do not receive heartbeats (from peers and client microservices) beyond a certain threshold.
+  server:
+    enable-self-preservation: true
+  client:
+    fetch-registry: false
+    #By default, the registry will also attempt to register itself, so you\u2019ll need to disable that, as well.
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

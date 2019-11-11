@@ -17,11 +17,17 @@ import com.netflix.discovery.EurekaClient;
 public class LoadBalancingBooks {
 
 	@GetMapping
-	String hello() {
+	String start() {
 		return String.format("Hello from %s with Port Number %s!", 
 				eurekaClient.getApplication(appName).getName(), serverPort);
 	}
 
+	@GetMapping(path = "/check")
+	String hello() {
+		return String.format("Hello from %s with Port Number %s!", 
+				eurekaClient.getApplication(appName).getName(), serverPort);
+	}
+	
 	@Autowired
 	@Lazy
 	EurekaClient eurekaClient;

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: books
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://blog-3-discovery-container:8761/eureka
+  instance:
+    preferIpAddress: true

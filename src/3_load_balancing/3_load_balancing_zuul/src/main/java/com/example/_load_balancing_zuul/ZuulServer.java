@@ -13,5 +13,4 @@ public class ZuulServer {
 	public static void main(String[] args) {
 		SpringApplication.run(ZuulServer.class, args);
 	}
-
 }
