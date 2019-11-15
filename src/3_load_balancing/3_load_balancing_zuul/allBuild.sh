@@ -1,3 +1,3 @@
 #!/bin/bash
-./gradlew build
+./gradlew clean build
 # docker build --tag blog_1_client-discovery .

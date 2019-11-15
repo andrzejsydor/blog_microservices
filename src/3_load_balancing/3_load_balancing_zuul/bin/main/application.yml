@@ -7,14 +7,29 @@ server:
 eureka:
   client:
     serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
       defaultZone: http://blog-3-discovery-container:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
   instance:
-    preferIpAddress: true 
+    prefer-ip-address: true 
 
 zuul:
-#all services are ignored, except for books
   ignoredServices: '*'
   routes:
     books:
-      serviceId: books
-      stripPrefix: false
+      path: /books/**
+#      service-id: books
+#      strip-prefix: false
+      
+management:
+  server:
+    port: 8763
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+#ribbon:
+#  eureka:
+#    enabled: false
