@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<table>
+   <tbody th:each="log : ${logs}" th:remove="tag">
+      <tr>
+         <td th:text="${log.id}">...</td>
+         <td th:text="${log.log}">...</td>
+      </tr>
+   </tbody>
+</table>
+
+</body>
+</html>

@@ -44,5 +44,13 @@ services:
       - "8762:8762"
     networks:
       - net1
+  blog-3-client:
+    container_name: blog-3-client-container
+    build:
+      context: ./3_load_balancing_client
+    ports: 
+      - "8090:8090"
+    networks:
+      - net1
 networks:
   net1:
